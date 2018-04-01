@@ -69,6 +69,12 @@ class Navigation extends React.Component {
                 Contact
               </a>
             </Link>
+            <a
+              href="https://github.com/nyl-auster/next-blog-with-graphcms"
+              className="navbar-item"
+            >
+              Dépot github
+            </a>
           </div>
         </div>
       </nav>
