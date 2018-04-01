@@ -1,16 +1,17 @@
 /**
- * Ce fichier est utilisé par pm2, chargé de gérer nos process node.
- * Il contient toute la configuration pour les différents environnement.
- * pm2 start ecosystem.config.js --env production"
+ * Fichier de configuration pour pm2, notre gestionnaire
+ * de process node. On s'en sert pour configurer pm2 mais aussi
+ * pour créer nos variable d'environnements.
  *
+ * On récupère aussi ce fichier dans next.config.js
+ * pour rendre les variables disponibles également pour
+ * le navigateur et pas seulement pour le serveur.
  */
 module.exports = {
   apps: [
     {
       name: "server-graphcms-blog",
       script: "./server.js",
-      instances: 0,
-      exec_mode: "cluster",
       env_development: {
         PORT: 3000,
         NODE_ENV: "development",
