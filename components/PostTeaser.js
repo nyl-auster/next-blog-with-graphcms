@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ButtonLink from "./ButtonLink";
 
 export default ({ post }) => (
   <div className="post-teaser" style={{ paddingBottom: "2rem" }}>
@@ -11,9 +12,7 @@ export default ({ post }) => (
       <div className="column">
         <div className="title">{post.title}</div>
         <div className="content">{post.content.substring(0, 500)} ...</div>
-        <Link href={`/post?id=${post.id}`}>
-          <div className="button is-info">Lire la suite</div>
-        </Link>
+        <ButtonLink href={`/post?id=${post.id}`}>Lire la suite</ButtonLink>
       </div>
     </div>
   </div>

@@ -51,11 +51,8 @@ class Navigation extends React.Component {
           </div>
         </div>
         <div
-          className={
-            this.state.mobileMenuIsActive
-              ? "navbar-menu is-active"
-              : "navbar-menu"
-          }
+          className={`navbar-menu ${this.state.mobileMenuIsActive &&
+            "is-active"}`}
           id="navMenu"
         >
           <div className="navbar-end">
