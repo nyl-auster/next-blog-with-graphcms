@@ -1,3 +1,7 @@
+# Un site Next.js avec graphCMS comme back office
+
+Objectif : créer rapidement un site en React, rendu côté serveur, avec un back office pour gérer les contenus.
+
 ## installation
 
 ```sh
@@ -6,43 +10,26 @@ npm install pm2 -g
 npm i
 ```
 
-## développer
+## pour le développement
 
 ```sh
 npm run dev
 ```
 
-### Créer une version JAMStack
+### pour déployer en production
 
 ```sh
-# s'assurer que le répertoire est clean
-git checkout .
-# récupérer les dernières modif
-git pull --rebase
-# re compiler le code et redémarrer les process node
+# compiler le code
 npm run build
-npm run export
-```
-
-### déployer le code servi par node
-
-sur le serveur cible :
-
-```sh
-# s'assurer que le répertoire est clean
-git checkout .
-# récupérer les dernières modif
-git pull --rebase
-# re compiler le code et redémarrer les process node
-npm run build
+# démarrer les process node
 npm run start
 ```
 
-### exemple de configuration nginx
+## bonus : configurer nginx pour lier un nom de domaine au process node
 
 ```
 # se connecter au serveur node
-upstream www.aides-territoires.beta.gouv.fr {
+upstream example.site.fr {
     server localhost:3000;
 }
 
@@ -50,10 +37,11 @@ server {
   gzip on;
 	listen 80;
 	listen [::]:80;
-	server_name www.aides-territoires.beta.gouv.fr;
+	server_name example.site.fr;
 	location / {
-		proxy_pass http://www.aides-territoires.beta.gouv.fr;
+		proxy_pass example.site.fr;
 	}
 }
 ```
-# next-blog-with-graphcms
+
+## Explications
