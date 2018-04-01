@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "dotenv": "^5.0.1",
     "graphql-request": "^1.5.1",
     "next": "^5.1.0",
     "nprogress": "^0.2.0",
+    "pm2": "^2.10.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -10,6 +12,6 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "pm2 start ecosystem.config.js --env production"
+    "start": "node_modules/.bin/pm2 start ecosystem.config.js --env production"
   }
 }

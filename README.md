@@ -2,7 +2,9 @@
 
 Objectif : créer rapidement un site en React, rendu côté serveur, avec un back office pour gérer les contenus.
 
-## installation
+## Getting started
+
+### installation
 
 ```sh
 # pm2 est utilisé pour la gestion des process node
@@ -10,7 +12,7 @@ npm install pm2 -g
 npm i
 ```
 
-## pour le développement
+### pour le développement
 
 ```sh
 npm run dev
@@ -25,7 +27,9 @@ npm run build
 npm run start
 ```
 
-## bonus : configurer nginx pour lier un nom de domaine au process node
+## avancé
+
+### configurer nginx pour lier un nom de domaine au process node
 
 ```
 # se connecter au serveur node
@@ -43,5 +47,3 @@ server {
 	}
 }
 ```
-
-## Explications
