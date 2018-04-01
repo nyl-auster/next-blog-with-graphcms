@@ -18,7 +18,6 @@ export default class DefaultLayout extends React.Component {
         </Head>
         <PageLoader />
         <Navigation />
-        <Header />
         {this.props.children}
       </div>
     );

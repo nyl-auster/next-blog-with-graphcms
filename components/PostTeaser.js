@@ -10,7 +10,10 @@ export default ({ post }) => (
       </div>
       <div className="column">
         <div className="title">{post.title}</div>
-        <div className="content">{post.content}</div>
+        <div className="content">{post.content.substring(0, 500)} ...</div>
+        <Link href={`/post?id=${post.id}`}>
+          <div className="button is-info">Lire la suite</div>
+        </Link>
       </div>
     </div>
   </div>

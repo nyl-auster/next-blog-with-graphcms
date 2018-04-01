@@ -21,7 +21,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <nav
-        className="navbar container"
+        className="navbar is-info"
         role="navigation"
         aria-label="main navigation"
       >
@@ -32,7 +32,7 @@ class Navigation extends React.Component {
               <img src="/static/images/YOUR_LOGO.png" />
               */}
               <p className="app-name ">
-                <strong>Site spinoziste</strong>
+                <strong>Spinoza, le bonheur par la géométrie</strong>
               </p>
             </a>
           </Link>

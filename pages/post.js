@@ -1,35 +1,27 @@
 import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
-import PostTeaser from "../components/PostTeaser";
+import PostDetail from "../components/PostDetail";
 import graphcms from "../services/graphcms";
 
 export default class HomePage extends React.Component {
-  static async getInitialProps() {
+  static async getInitialProps(req) {
     const query = `{
-      allPosts {
+      Post(id:"${req.query.id}") {
         id
+        content
         coverImage {
+          id
           url
         }
-        title
-        content
-        authors {
-          id
-          name
-        }
       }
-    }
+    }    
     `;
     return graphcms.request(query);
   }
   render() {
     return (
       <DefaultLayout>
-        <div className="container section">
-          {this.props.allPosts.map((post, index) => (
-            <PostTeaser key={post.id} post={post} />
-          ))}
-        </div>
+        <PostDetail post={this.props.Post} />
       </DefaultLayout>
     );
   }
