@@ -21,7 +21,7 @@ export default class ButtonLink extends React.Component {
   render() {
     return (
       <div onClick={this.handleClick}>
-        <Link href={this.props.href}>
+        <Link {...this.props}>
           <div
             className={`button is-info ${
               this.state.isLoading ? "is-loading" : ""

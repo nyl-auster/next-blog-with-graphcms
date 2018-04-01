@@ -11,7 +11,7 @@ export default class PostPage extends React.Component {
     // l'url est de la forme "/post?id=xxxx"
     // req.query.id permet de récupérer l'id de l'url
     const query = `{
-      Post(id:"${req.query.id}") {
+      Post(slug:"${req.query.slug}") {
         id
         content
         coverImage {

@@ -8,6 +8,7 @@ export default class HomePage extends React.Component {
     const query = `{
       allPosts {
         id
+        slug
         coverImage {
           url
         }

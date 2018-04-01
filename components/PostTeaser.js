@@ -12,7 +12,9 @@ export default ({ post }) => (
       <div className="column">
         <div className="title">{post.title}</div>
         <div className="content">{post.content.substring(0, 500)} ...</div>
-        <ButtonLink href={`/post?id=${post.id}`}>Lire la suite</ButtonLink>
+        <ButtonLink as={`/post/${post.slug}`} href={`/post?slug=${post.slug}`}>
+          Lire la suite
+        </ButtonLink>
       </div>
     </div>
   </div>
