@@ -7,18 +7,16 @@ Objectif : créer rapidement un site en React, rendu côté serveur, avec un bac
 ### installation
 
 ```sh
-# pm2 est utilisé pour la gestion des process node
-npm install pm2 -g
 npm i
 ```
 
-### pour le développement
+### démarrer le serveur de développement
 
 ```sh
 npm run dev
 ```
 
-### pour déployer en production
+### démarrer le serveur de production
 
 ```sh
 # compiler le code
@@ -29,7 +27,7 @@ npm run start
 
 ## avancé
 
-### configurer nginx pour lier un nom de domaine au process node
+### configurer nginx pour lier un nom de domaine au serveur node
 
 ```
 # se connecter au serveur node

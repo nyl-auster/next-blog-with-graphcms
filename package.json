@@ -11,6 +11,6 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "node server.js"
+    "start": "next start"
   }
 }
