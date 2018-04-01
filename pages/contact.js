@@ -1,7 +1,7 @@
 import React from "react";
 import DefaultLayout from "../layout/DefaultLayout";
 
-export default class HomePage extends React.Component {
+export default class ContactPage extends React.Component {
   render() {
     return (
       <DefaultLayout>

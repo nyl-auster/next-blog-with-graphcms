@@ -1,8 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Head from "next/head";
 import PageLoader from "../components/PageLoader";
-import Header from "../components/Header";
+import Head from "next/head";
 
 export default class DefaultLayout extends React.Component {
   render() {

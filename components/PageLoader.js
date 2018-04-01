@@ -10,6 +10,9 @@ Router.onRouteChangeStart = url => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
+/**
+ * Affiche en haut de la page une barre de progression du chargement
+ */
 export default () => (
   <div>
     <Head>
